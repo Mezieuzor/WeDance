@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "nuxt dev --spa",
-    "build": "yarn lint && nuxt generate",
+    "build": "babel src -d lib",
     "start": "nuxt start",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "test": "jest"
@@ -15,6 +15,8 @@
     "*.{js,vue}": "yarn lint",
     "*.{css,vue}": "stylelint"
   },
+
+
 
   "engines": {
     "node": "18"

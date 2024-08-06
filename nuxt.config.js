@@ -2,6 +2,7 @@ import { orderBy } from 'lodash'
 import firebase from 'firebase/app'
 import 'firebase/firestore'
 
+
 export const app = {
   name: 'WeDance',
   description: 'Discover dance events near you',
@@ -12,7 +13,6 @@ export const app = {
   author: 'WeDance',
   cover: '/cover/cover.png',
 }
-
 if (!process.env.FIREBASE_CONFIG) {
   throw new Error('Missing Firebase Configuration')
 }
