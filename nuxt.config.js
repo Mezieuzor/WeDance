@@ -2,7 +2,6 @@ import { orderBy } from 'lodash'
 import firebase from 'firebase/app'
 import 'firebase/firestore'
 
-
 export const app = {
   name: 'WeDance',
   description: 'Discover dance events near you',
@@ -264,7 +263,7 @@ export default {
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
     // Doc: https://composition-api.nuxtjs.org/
-    '@nuxtjs/composition-api',
+    '@nuxtjs/composition-api/module',
     '@nuxtjs/google-fonts',
     '@nuxt/postcss8',
   ],
@@ -282,6 +281,7 @@ export default {
     '@nuxtjs/sitemap',
     '@nuxt/content',
     '@nuxtjs/toast',
+    '@nuxtjs/composition-api/module',
   ],
   googleFonts: {
     display: 'swap',
@@ -326,14 +326,27 @@ export default {
   build: {
     transpile: ['date-fns'],
     postcss: {
-      plugins: {
-        tailwindcss: {},
-        autoprefixer: {},
+      postcssOptions: {
+        plugins: {
+          // Example plugins
+          'postcss-import': {},
+          tailwindcss: {},
+          autoprefixer: {},
+          'postcss-preset-env': {
+            stage: 2,
+            features: {
+              'nesting-rules': true,
+            },
+          },
+        },
       },
     },
     loaders: {
       vue: {
         prettify: false,
+      },
+      scss: {
+        implementation: require('sass'),
       },
     },
     /*
@@ -397,6 +410,7 @@ export default {
     routes: async () => {
       return await getRoutes()
     },
+
     i18n: true,
   },
   i18n: {
