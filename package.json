@@ -16,7 +16,7 @@
     "*.{css,vue}": "stylelint"
   },
  "engines": {
-  "node": "20"
+  "node": "20.16.0"
 },
   "dependencies": {
     "@nuxtjs/composition-api": "^0.34.0",
