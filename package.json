@@ -15,9 +15,9 @@
     "*.{js,vue}": "yarn lint",
     "*.{css,vue}": "stylelint"
   },
-  "engines": {
-    "node": "20"
-  },
+ "engines": {
+  "node": "14.17.6"
+},
   "dependencies": {
     "@nuxtjs/composition-api": "^0.34.0",
     "@tailwindcss/forms": "^0.2.1",
