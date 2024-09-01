@@ -98,3 +98,6 @@ sw.*
 .vscode
 
 todo.md
+
+# ignoring node version 14
+.yarn.lock
