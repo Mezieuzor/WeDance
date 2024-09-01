@@ -99,5 +99,4 @@ sw.*
 
 todo.md
 
-# ignoring node version 14
-.yarn.lock
+
