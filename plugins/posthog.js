@@ -34,13 +34,14 @@ export default function({ app: { router } }, inject) {
     analytics.logEvent(...params)
 
     if (params[0] === 'page_view') {
+      // No action needed for 'page_view'
     } else if (params[0] === 'screen_view') {
       posthog.capture('$pageview', params[1])
     } else {
       posthog.capture(...params)
     }
   }
-
+  // Inject PostHog and tracking function into your app
   inject('posthog', posthog)
   inject('track', track)
 }

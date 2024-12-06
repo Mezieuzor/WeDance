@@ -19,6 +19,7 @@
     "node": ">=18.20.5"
   },
   "dependencies": {
+    "@babel/eslint-parser": "^7.25.9",
     "@nuxtjs/composition-api": "^0.34.0",
     "@tailwindcss/forms": "^0.2.1",
     "@vue-hero-icons/outline": "^1.7.2",
@@ -344,6 +345,7 @@
     "escape-html": "^1.0.3",
     "escape-string-regexp": "^1.0.5",
     "escodegen": "^1.14.3",
+    "eslint": "8.57.1",
     "eslint-config-prettier": "^6.15.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-loader": "^4.0.2",
